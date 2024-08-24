@@ -44,8 +44,20 @@
 git clone https://github.com/yourusername/MeteoStation.git
 cd MeteoStation
 ```
-<h3>Install Required Libraries</h3> <ul> <li><code>ESP8266WiFi</code></li> <li><code>PubSubClient</code></li> <li><code>ArduinoOTA</code></li> <li><code>ArduinoJson</code></li> </ul> <p>Install the libraries using the Arduino IDE Library Manager.</p> <h3>Configure Settings</h3> <ul> <li><strong>Wi-Fi Configuration:</strong> Set your SSID and password in <code>wifi.h</code>.</li> <li><strong>MQTT Broker:</strong> Configure MQTT broker settings in <code>mqtt.h</code>.</li> <li><strong>Weather Station:</strong> Configure settings for the MISOL WH24P UART in <code>sensors.h</code>.</li> </ul> <h3>Upload the Firmware</h3> <p>Upload the firmware to the ESP8266 microcontroller and ensure the device is connected to Wi-Fi and your MQTT broker.</p> <h2>📊 Data Transmission Example</h2> <p>The weather data is transmitted in JSON format:</p>
+<h3>Install Required Libraries</h3> <ul> 
+	<li><code>ESP8266WiFi</code></li> <li><code>PubSubClient</code></li> 
+	<li><code>ArduinoOTA</code></li> <li><code>ArduinoJson</code></li> 
+</ul> <p>Install the libraries using the Arduino IDE Library Manager.</p> 
 
+<h3>Configure Settings</h3> <ul> 
+	<li><strong>Wi-Fi Configuration:</strong> Set your SSID and password in <code>wifi.h</code>.</li> 
+	<li><strong>MQTT Broker:</strong> Configure MQTT broker settings in <code>mqtt.h</code>.</li> 
+	<li><strong>Weather Station:</strong> Configure settings for the MISOL WH24P UART in <code>sensors.h</code>.</li> </ul> 
+ 
+ <h3>Upload the Firmware</h3> 
+ <p>Upload the firmware to the ESP8266 microcontroller and ensure the device is connected to Wi-Fi and your MQTT broker.</p> 
+ <h2>📊 Data Transmission Example</h2> 
+ <p>The weather data is transmitted in JSON format:</p>
 ```sh
 {
   "Temp": 23.5,
@@ -67,4 +79,5 @@ cd MeteoStation
 	<li><code>sensors.h / sensors.cpp</code> — Processes data from the MISOL WH24P UART weather station.</li> </ul> 
 
  ----------------------------------------------------------------------------------------------------------------
- <h2>📄 License</h2> <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.</p> 
+ <h2>📄 License</h2> 
+ <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.</p> 
