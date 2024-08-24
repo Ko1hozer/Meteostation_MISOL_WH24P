@@ -61,10 +61,10 @@ cd MeteoStation
 	<li><strong>Black:</strong> GND (GND)</li> 
 	<li><strong>Red:</strong> ( D ) (GPIO1 (RX))</li> 
 	<li><strong>Yellow:</strong> (D-) (GPIO3 (TX))</li> 
-	<li><strong>Green:</strong><ul>
-<img src="https://github.com/Ko1hozer/Meteostation_MISOL_WH24P_ESP8266_MQTT/blob/main/image/Wemos%20D1%20pin.png" 
+	<li><strong>Green:</strong></li>
+<ul> <img src="https://github.com/Ko1hozer/Meteostation_MISOL_WH24P_ESP8266_MQTT/blob/main/image/Wemos%20D1%20pin.png" 
      alt="Wemos D1 Pinout Diagram" 
-     width="350" /> 
+     width="350" /> </li>
 		
  <h3>Upload the Firmware</h3> 
  <p>Upload the firmware to the ESP8266 microcontroller and ensure the device is connected to Wi-Fi and your MQTT broker.</p> 
