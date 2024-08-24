@@ -59,6 +59,17 @@ cd MeteoStation
 <li><strong>MQTT брокер:</strong> Настройте параметры MQTT брокера в <code>mqtt.h</code>.</li> 
 <li><strong>Метеостанция:</strong> Настройте параметры для MISOL WH24P UART в <code>sensors.h</code>.</li>
 
+<h3>Подключение Wemos D1 - MISOL WH24P:</h3> <ul> 
+
+<li><strong>Черный:</strong>    GND   (GND)</li> 
+<li><strong>Красный:</strong>   (D )  (GPIO1 (RX))</li> 
+<li><strong>Желтый:</strong>    (D-)  (GPIO3 (TX))</li> 
+<li><strong>Зеленый:</strong>   VDD   (5V)</li> 
+
+<img src="https://github.com/Ko1hozer/Meteostation_MISOL_WH24P_ESP8266_MQTT/blob/main/image/Wemos%20D1%20pin.png" 
+     alt="Wemos D1 Pinout Diagram" 
+     width="350" /> 
+     
  </ul> <h3>Загрузка прошивки</h3> 
  <p>Загрузите прошивку в микроконтроллер ESP8266 и убедитесь, что устройство подключено к Wi-Fi и вашему MQTT брокеру.</p>
  
