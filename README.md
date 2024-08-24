@@ -1,48 +1,51 @@
-# MeteoStation
+<div align="center">
+  <h1>☁️ MeteoStation Integration Project ☁️</h1>
+  <p>Integrating MISOL WH24P UART Weather Station with ESP8266 and MQTT</p>
+</div>
 
-## Описание проекта
+<h2>🚀 Features</h2>
 
-**MeteoStation** — это проект для интеграции метеостанции MISOL WH24P UART с микроконтроллером ESP8266. Система собирает данные о погодных условиях с метеостанции и передает их на MQTT-брокер. Включена поддержка OTA (Over-The-Air) обновлений, что позволяет обновлять прошивку устройства удаленно.
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Supported</th>
+  </tr>
+  <tr>
+    <td><em>Wi-Fi Connectivity</em> — Automatic connection to Wi-Fi with the option to set a static IP address. The device restarts automatically if it fails to connect.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><em>MISOL WH24P UART Integration</em> — Seamless support for connecting and gathering weather data from the MISOL WH24P UART weather station.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><em>MQTT Protocol</em> — Transmits collected weather data (temperature, humidity, pressure, wind speed, etc.) to an MQTT broker.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><em>Command Handling</em> — Allows control of the device through MQTT commands, including resetting and requesting status updates.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><em>Over-The-Air (OTA) Updates</em> — Firmware can be updated over Wi-Fi without physical access to the device.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><em>Detailed Logging</em> — Debug and device status information is logged and sent to MQTT for easy monitoring.</td>
+    <td>✅</td>
+  </tr>
+</table>
 
-## Особенности
+<h2>📦 Installation</h2>
 
-- **Подключение к Wi-Fi**: Автоматическое подключение к Wi-Fi с возможностью задания статического IP-адреса. При невозможности подключения устройство автоматически перезагружается.
-- **Интеграция с MISOL WH24P UART**: Поддержка работы с метеостанцией MISOL WH24P UART для получения данных о погоде.
-- **MQTT-протокол**: Передача собранных данных (температура, влажность, давление, скорость ветра и другие параметры) на MQTT-брокер.
-- **Обработка команд**: Возможность управления устройством через MQTT-команды, включая перезагрузку и запрос текущего статуса.
-- **Поддержка OTA**: Обновление прошивки через Wi-Fi без физического доступа к устройству.
-- **Детализированные логи**: Логирование отладочной информации и состояния устройства в MQTT.
-
-## Установка
-
-### Клонирование репозитория
+<h3>Clone the Repository</h3>
 
 ```sh
 git clone https://github.com/yourusername/MeteoStation.git
 cd MeteoStation
 ```
-**Установка библиотек**
-Установите следующие библиотеки через библиотечный менеджер Arduino IDE:
+<h3>Install Required Libraries</h3> <ul> <li><code>ESP8266WiFi</code></li> <li><code>PubSubClient</code></li> <li><code>ArduinoOTA</code></li> <li><code>ArduinoJson</code></li> </ul> <p>Install the libraries using the Arduino IDE Library Manager.</p> <h3>Configure Settings</h3> <ul> <li><strong>Wi-Fi Configuration:</strong> Set your SSID and password in <code>wifi.h</code>.</li> <li><strong>MQTT Broker:</strong> Configure MQTT broker settings in <code>mqtt.h</code>.</li> <li><strong>Weather Station:</strong> Configure settings for the MISOL WH24P UART in <code>sensors.h</code>.</li> </ul> <h3>Upload the Firmware</h3> <p>Upload the firmware to the ESP8266 microcontroller and ensure the device is connected to Wi-Fi and your MQTT broker.</p> <h2>📊 Data Transmission Example</h2> <p>The weather data is transmitted in JSON format:</p>
 
-ESP8266WiFi
-PubSubClient
-ArduinoOTA
-ArduinoJson
-
-**Настройка параметров**
-В файле wifi.h укажите SSID и пароль для подключения к Wi-Fi.
-В файле mqtt.h настройте параметры подключения к вашему MQTT-брокеру.
-Настройте параметры метеостанции MISOL WH24P UART.
-
-**Загрузка прошивки**
-Загрузите прошивку на ESP8266 и убедитесь, что устройство подключено к Wi-Fi и MQTT-брокеру.
-
-**Использование**
-Сбор данных: После запуска устройство собирает данные с метеостанции MISOL WH24P UART и отправляет их на MQTT-брокер.
-Отправка команд: Через MQTT можно отправлять команды для управления устройством.
-Мониторинг: Отладочные сообщения отправляются на MQTT для удобного мониторинга.
-
-**Передача данных в формате JSON:**
 ```sh
 {
   "Temp": 23.5,
@@ -55,14 +58,13 @@ ArduinoJson
   "Light": 850.0
 }
 ```
-**Структура проекта**
-MeteoStation.ino: Главный файл проекта.
-wifi.h и wifi.cpp: Подключение и управление Wi-Fi.
-mqtt.h и mqtt.cpp: Подключение и передача данных через MQTT.
-ota.h и ota.cpp: Поддержка OTA обновлений.
-sensors.h и sensors.cpp: Обработка данных с метеостанции MISOL WH24P UART.
 
-----------------------------------------------------------------------------------------------------
-**Лицензия**
-Проект распространяется под лицензией MIT. 
-Смотрите файл LICENSE для получения дополнительной информации.
+<h2>🛠️ Project Structure</h2> <ul> 
+	<li><code>MeteoStation.ino</code> — Main project file.
+	</li> <li><code>wifi.h / wifi.cpp</code> — Handles Wi-Fi connection and management.</li> 
+	<li><code>mqtt.h / mqtt.cpp</code> — Manages MQTT connection and data transmission.</li> 
+	<li><code>ota.h / ota.cpp</code> — Handles OTA firmware updates.</li> 
+	<li><code>sensors.h / sensors.cpp</code> — Processes data from the MISOL WH24P UART weather station.</li> </ul> 
+
+ ----------------------------------------------------------------------------------------------------------------
+ <h2>📄 License</h2> <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.</p> 
