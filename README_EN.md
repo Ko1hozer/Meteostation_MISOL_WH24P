@@ -55,9 +55,20 @@ cd MeteoStation
 	<li><strong>Wi-Fi Configuration:</strong> Set your SSID and password in <code>wifi.h</code>.</li> 
 	<li><strong>MQTT Broker:</strong> Configure MQTT broker settings in <code>mqtt.h</code>.</li> 
 	<li><strong>Weather Station:</strong> Configure settings for the MISOL WH24P UART in <code>sensors.h</code>.</li> </ul> 
- 
+
+<h3>Connecting Wemos D1 - MISOL WH24P:</h3> 
+<ul> 
+	<li><strong>Black:</strong> GND (GND)</li> 
+	<li><strong>Red:</strong> ( D ) (GPIO1 (RX))</li> 
+	<li><strong>Yellow:</strong> (D-) (GPIO3 (TX))</li> 
+	<li><strong>Green:</strong><ul>
+<img src="https://github.com/Ko1hozer/Meteostation_MISOL_WH24P_ESP8266_MQTT/blob/main/image/Wemos%20D1%20pin.png" 
+     alt="Wemos D1 Pinout Diagram" 
+     width="350" /> 
+		
  <h3>Upload the Firmware</h3> 
  <p>Upload the firmware to the ESP8266 microcontroller and ensure the device is connected to Wi-Fi and your MQTT broker.</p> 
+ 
  <h2>📊 Data Transmission Example</h2> 
  <p>The weather data is transmitted in JSON format:</p>
  
