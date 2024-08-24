@@ -1,5 +1,6 @@
 <div align="center">
-  <h1>☁️ MeteoStation Integration Project ☁️</h1>
+	<h2><a href="https://github.com/Ko1hozer/Meteostation_MISOL_WH24P/blob/main/README.md">README НА РУССКОМ</a></h2>
+  <h1>☁️ MeteoStation MISOL WH24P RS485 Integration Project ☁️</h1>
   <p>Integrating MISOL WH24P UART Weather Station with ESP8266 and MQTT</p>
 </div>
 
@@ -8,7 +9,7 @@
 <table>
   <tr>
     <th>Feature</th>
-    <th>Supported</th>
+    <th></th>
   </tr>
   <tr>
     <td><em>Wi-Fi Connectivity</em> — Automatic connection to Wi-Fi with the option to set a static IP address. The device restarts automatically if it fails to connect.</td>
@@ -44,6 +45,7 @@
 git clone https://github.com/yourusername/MeteoStation.git
 cd MeteoStation
 ```
+
 <h3>Install Required Libraries</h3> <ul> 
 	<li><code>ESP8266WiFi</code></li> <li><code>PubSubClient</code></li> 
 	<li><code>ArduinoOTA</code></li> <li><code>ArduinoJson</code></li> 
@@ -58,6 +60,7 @@ cd MeteoStation
  <p>Upload the firmware to the ESP8266 microcontroller and ensure the device is connected to Wi-Fi and your MQTT broker.</p> 
  <h2>📊 Data Transmission Example</h2> 
  <p>The weather data is transmitted in JSON format:</p>
+ 
 ```sh
 {
   "Temp": 23.5,
@@ -77,6 +80,8 @@ cd MeteoStation
 	<li><code>mqtt.h / mqtt.cpp</code> — Manages MQTT connection and data transmission.</li> 
 	<li><code>ota.h / ota.cpp</code> — Handles OTA firmware updates.</li> 
 	<li><code>sensors.h / sensors.cpp</code> — Processes data from the MISOL WH24P UART weather station.</li> </ul> 
+
+
 
  ----------------------------------------------------------------------------------------------------------------
  <h2>📄 License</h2> 
